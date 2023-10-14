@@ -1,0 +1,13 @@
+<input type="file" (input)="onFileUpload($event)" />
+
+<a href="{{ url }}">{{ url }}</a>
+
+<input type="text" placeholder="filePath" [(ngModel)]="filePath" />
+
+<button class="button" (click)="onDeleteFile()">Delete</button>
+
+<mat-card class="mat">
+  <ul *ngFor="let file of files">
+    <li>{{ file }}</li>
+  </ul>
+</mat-card>
